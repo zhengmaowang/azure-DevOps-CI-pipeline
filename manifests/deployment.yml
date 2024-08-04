@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: zhengmaowangazuredevopscipipeline 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zhengmaowangazuredevopscipipeline
+  template:
+    metadata:
+      labels:
+        app: zhengmaowangazuredevopscipipeline 
+    spec:
+      containers:
+        - name: zhengmaowangazuredevopscipipeline 
+          image: myacrcontainerregistry001.azurecr.io/zhengmaowangazuredevopscipipeline
+          ports:
+          - containerPort: 8080
