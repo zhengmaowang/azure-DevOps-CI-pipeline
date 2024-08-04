@@ -33,4 +33,5 @@ stages:
           connectionType: 'kubernetesServiceConnection'
           kubernetesServiceConnection: 'default-svc-conn'
           namespace: 'dev'
+          manifests: 'k8s-deployment.yaml'
 
